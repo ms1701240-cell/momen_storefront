@@ -50,6 +50,22 @@ useEffect(()=>{
 },[cartprod]);
 //const[page,setpage]=useState('products')
 
+const getuserprofile = async () => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    try {
+      const res = await axios.get('https://momen-store.vercel.app/profile', {
+        headers: { 'Authorization': token }
+      });
+      setuserprofile(res.data); // هنا بنملى البيانات (Email, Username, Phone)
+    } catch (err) {
+      console.log("Error fetching profile", err);
+    }
+  }
+};
+useEffect(() => {
+    getuserprofile();
+}, []); // دي بتشتغل مرة واحدة أول ما الموقع يفتح
 const[search,getsearch]=useState('')
 const[loading,setloading]=useState(true)
 
@@ -80,10 +96,10 @@ return (
       Object.values(products).flat() : products[Category]
     } modal={modal} setmodal={setmodal} setcart={setcart} cartprod={cartprod} search={search} getsearch={getsearch} /></>}/>
     <Route path="/box" element={<><Boxshow cartprod={cartprod} setcart={setcart}/></>}/>
-     <Route path="/signup" element={<> <Sign  setcart={setcart}/></>}/>
+     <Route path="/signup" element={<> <Sign  setcart={setcart} getuserprofile={getuserprofile}/></>}/>
       <Route path="/about" element={<><About/></>}/>
        <Route path="/login" element={<><Login setuserprofile={setuserprofile}  setcart={setcart}/></>}/>
-        <Route path="/profile" element={<> <Profile userprofile={userprofile} setuserprofile={setuserprofile}/></>}/>
+        <Route path="/profile" element={<> <Profile userprofile={userprofile} setuserprofile={setuserprofile} getuserprofile={getuserprofile}/></>}/>
     </Routes>
    </Router>
     </>

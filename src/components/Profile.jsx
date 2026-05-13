@@ -1,6 +1,6 @@
 
 
-const Profile = ({ userprofile, setuserprofile, setpage }) => {
+const Profile = ({ userprofile, setuserprofile, setpage,getuserprofile }) => {
     const logout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('userid');

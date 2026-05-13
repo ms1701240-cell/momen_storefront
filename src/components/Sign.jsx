@@ -2,8 +2,15 @@ import axios from "axios"
 import { useState } from "react"
 import toasts from 'react-hot-toast';
 import PhoneInput from 'react-phone-input-2';
+import { useNavigate } from "react-router-dom";
 import 'react-phone-input-2/lib/style.css';
-const Sign = ({setpage,setcart}) => {
+
+
+
+
+const Sign = ({setcart,getuserprofile}) => {
+  const navigate = useNavigate(); 
+
   const [signinput,setsigninput]=useState({
     Username:'',
     Email:'',
@@ -16,12 +23,14 @@ const Sign = ({setpage,setcart}) => {
        const res= await axios.post('https://momen-store.vercel.app/inputsign',signinput);
       const token=res.data.token
        localStorage.setItem('token',token)
+      
        const cartshow= await axios.get(`https://momen-store.vercel.app/logincart`,{
         headers:{'Authorization':token}
        })
-       setcart(cartshow.data)
+        await getuserprofile();
+       setcart([])
         toasts.success('Account created successfully! 🎉');
-        setpage('profile')
+        navigate('/profile');
        setsigninput({
         Username:'',
     Email:'',
@@ -32,6 +41,7 @@ const Sign = ({setpage,setcart}) => {
     }catch{
       toasts.error('error server')
     }
+    
   }
   return (
     <div className="tw-py-10 container  border border-dark shadow-lg bg-light rounded-5 mt-5 border border-5"> {/* أضفت بادنج بسيط من فوق */}

@@ -1,8 +1,9 @@
 import axios from "axios"
 import { useState } from "react"
 import toasts from 'react-hot-toast';
-
-const Login = ({setpage,setcart,setuserprofile}) => {
+import { useNavigate } from "react-router-dom";
+const Login = ({setcart,setuserprofile,getuserprofile}) => {
+  const navigate = useNavigate();
     const[inputlogin,setinputlogin]=useState({
         Email:'',
         Password:''
@@ -15,13 +16,14 @@ const Login = ({setpage,setcart,setuserprofile}) => {
             localStorage.setItem('token',token)
           localStorage.setItem('username', res.data.user.Username);
                  toasts.success('wellcome')
+                 navigate('/profile');
                  setuserprofile(res.data.user)
             const cartshow=await axios.get(`https://momen-store.vercel.app/logincart/`,{
                 headers:{'Authorization':token}
             })
             setcart(cartshow.data)
 
-                setpage('profile')
+                
                  setinputlogin(res.data)
                  setinputlogin({
                     Email:'',
