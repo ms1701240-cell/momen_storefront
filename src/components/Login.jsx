@@ -31,8 +31,11 @@ const Login = ({setcart,setuserprofile,getuserprofile}) => {
         setinputlogin({ Email: '', Password: '' });
 
     } catch (err) {
-        toasts.error('Email or Password incorrect');
-    }
+    // السطر ده هيعرفك لو السيرفر وقع فعلاً ولا مجرد باسورد غلط
+    const errorMsg = err.response?.data?.message || 'Email or Password incorrect';
+    toasts.error(errorMsg);
+    console.log("Login Error Details:", err.response?.data);
+}
 };
   return (
     <div>
