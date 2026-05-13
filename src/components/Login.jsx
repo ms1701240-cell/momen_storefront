@@ -8,31 +8,32 @@ const Login = ({setcart,setuserprofile,getuserprofile}) => {
         Email:'',
         Password:''
     })
-    const submited=async(e)=>{
-        e.preventDefault()
-        try{
-            const res=await axios.post('https://momen-store.vercel.app/logininput',inputlogin)
-              const token=res.data.token
-            localStorage.setItem('token',token)
-          localStorage.setItem('username', res.data.user.Username);
-                 toasts.success('wellcome')
-                 navigate('/profile');
-                 setuserprofile(res.data.user)
-            const cartshow=await axios.get(`https://momen-store.vercel.app/logincart/`,{
-                headers:{'Authorization':token}
-            })
-            setcart(cartshow.data)
+   const submited = async (e) => {
+    e.preventDefault();
+    try {
+        const res = await axios.post('https://momen-store.vercel.app/logininput', inputlogin);
+        const token = res.data.token;
+        localStorage.setItem('token', token);
+        localStorage.setItem('username', res.data.user.Username);
 
-                
-                 setinputlogin(res.data)
-                 setinputlogin({
-                    Email:'',
-                    Password:''
-                 })
-        }catch{
-            toasts.error('error server')
-        }
+        // أهم خطوة: حدث الـ State فوراً ببيانات اليوزر
+        setuserprofile(res.data.user); 
+        
+        // لو محتاج داتا إضافية من السيرفر (زي التليفون والإيميل)
+        await getuserprofile(); 
+
+        toasts.success('Welcome back! 🎉');
+        
+        // دلوقتي انقل وأنت مطمن إن الـ userprofile مش null
+        navigate('/profile'); 
+
+        // تصفير الفورم
+        setinputlogin({ Email: '', Password: '' });
+
+    } catch (err) {
+        toasts.error('Email or Password incorrect');
     }
+};
   return (
     <div>
       <div className="tw-py-10 container  border border-dark shadow-lg bg-light rounded-5 mt-5 border border-5">

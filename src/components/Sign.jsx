@@ -8,7 +8,7 @@ import 'react-phone-input-2/lib/style.css';
 
 
 
-const Sign = ({setcart,getuserprofile}) => {
+const Sign = ({setcart,getuserprofile,setuserprofile}) => {
   const navigate = useNavigate(); 
 
   const [signinput,setsigninput]=useState({
@@ -17,32 +17,40 @@ const Sign = ({setcart,getuserprofile}) => {
     Password:'',
     Phone:''
   })
-  const confirmed=async(e)=>{
-    e.preventDefault()
-    try{
-       const res= await axios.post('https://momen-store.vercel.app/inputsign',signinput);
-      const token=res.data.token
-       localStorage.setItem('token',token)
+ const confirmed = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post('https://momen-store.vercel.app/inputsign', signinput);
+      const token = res.data.token;
       
-       const cartshow= await axios.get(`https://momen-store.vercel.app/logincart`,{
-        headers:{'Authorization':token}
-       })
-        await getuserprofile();
-       setcart([])
-        toasts.success('Account created successfully! 🎉');
-        navigate('/profile');
-       setsigninput({
-        Username:'',
-    Email:'',
-    Password:'',
-    Phone:''
-       })
+      // ١. سيف التوكن والاسم في الـ Storage
+      localStorage.setItem('token', token);
+      localStorage.setItem('username', signinput.Username);
 
-    }catch{
-      toasts.error('error server')
+      // ٢. أهم تكة: حدث الـ State يدوياً بالبيانات اللي معاك فعلاً
+      // كدة الناف بار والبروفايل هيشوفوا البيانات دي "حالا" مش هيستنوا السيرفر
+      setuserprofile({
+        Username: signinput.Username,
+        Email: signinput.Email,
+        Phone: signinput.Phone
+      });
+
+      // ٣. نادي الدالة دي للتأكيد (احتياطي)
+      await getuserprofile(); 
+
+      setcart([]);
+      toasts.success('Account created successfully! 🎉');
+      
+      // ٤. انقل للبروفايل وأنت مطمن
+      navigate('/profile');
+
+      setsigninput({ Username: '', Email: '', Password: '', Phone: '' });
+
+    } catch (err) {
+      // تعديل عشان لو الإيميل موجود يقولك السبب
+      toasts.error(err.response?.data?.message || 'Error server');
     }
-    
-  }
+  };
   return (
     <div className="tw-py-10 container  border border-dark shadow-lg bg-light rounded-5 mt-5 border border-5"> {/* أضفت بادنج بسيط من فوق */}
      <form onSubmit={confirmed}>

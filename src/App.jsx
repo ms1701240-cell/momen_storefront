@@ -96,9 +96,9 @@ return (
       Object.values(products).flat() : products[Category]
     } modal={modal} setmodal={setmodal} setcart={setcart} cartprod={cartprod} search={search} getsearch={getsearch} /></>}/>
     <Route path="/box" element={<><Boxshow cartprod={cartprod} setcart={setcart}/></>}/>
-     <Route path="/signup" element={<> <Sign  setcart={setcart} getuserprofile={getuserprofile}/></>}/>
+     <Route path="/signup" element={<> <Sign  setcart={setcart} getuserprofile={getuserprofile} setuserprofile={setuserprofile}/></>}/>
       <Route path="/about" element={<><About/></>}/>
-       <Route path="/login" element={<><Login setuserprofile={setuserprofile}  setcart={setcart}/></>}/>
+       <Route path="/login" element={<><Login setuserprofile={setuserprofile} getuserprofile={getuserprofile}  setcart={setcart}/></>}/>
         <Route path="/profile" element={<> <Profile userprofile={userprofile} setuserprofile={setuserprofile} getuserprofile={getuserprofile}/></>}/>
     </Routes>
    </Router>

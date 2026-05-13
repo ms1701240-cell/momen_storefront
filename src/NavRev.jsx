@@ -11,11 +11,11 @@ const NavRev = ({ setcat, cartprod, setuserprofile,userprofile }) => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-2">
       <div className="container-fluid">
         {/* Logo */}
-        <div className="d-flex align-items-center" onClick={() => setpage('products')} style={{ cursor: 'pointer' }}>
-          <img src="/img/sqar.png" style={{ width: '40px' }} alt="logo" />
-          <h2 className="ms-2 mb-0" style={{ fontFamily: 'Aref Ruqaa, serif' }}>طير</h2>
-        </div>
-
+       {/* في ملف NavRev.js استبدل سطر اللوجو بـ Link */}
+<Link to="/products" className="d-flex align-items-center text-decoration-none text-dark">
+    <img src="/img/sqar.png" style={{ width: '40px' }} alt="logo" />
+    <h2 className="ms-2 mb-0" style={{ fontFamily: 'Aref Ruqaa, serif' }}>طير</h2>
+</Link>
         {/* Toggler */}
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
