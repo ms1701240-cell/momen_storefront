@@ -1,6 +1,7 @@
 import axios from "axios";
 import {  useEffect, useRef, useState } from "react"
 import Footer from "./Footer";
+import ShowFeeds from "./ShowFeeds";
 
 
 const Feedbacks = () => {
@@ -75,22 +76,9 @@ const Feedbacks = () => {
   <button type="submit" ref={submitref}  class="btn btn-dark">Submit</button>
 </form>
         </div>
-        <div>{allcomment.length>0?(
-           allcomment.map((items,index)=>{
-          return  <div class="card w-50" key={index}>
-              {new Date(items.createdAt).toLocaleDateString("ar-Eg")}
-           <div class="card-body">
-          <h5 class="card-title">Comments</h5>
-           <h5>{items.Email}</h5>
-          <p class="card-text">
-           {items.Comments}
-           </p>
-          </div>
-         </div>
-           })
-        ):(<div> <h2 className="text-center">loading .....</h2></div>)
-       } </div>
+           <ShowFeeds />
         <Footer />
+     
     </div>
    
   )
