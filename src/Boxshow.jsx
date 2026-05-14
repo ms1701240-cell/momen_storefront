@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { useState, useEffect } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 // حل مشكلة أيقونة الدبوس
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -10,14 +10,15 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
 
-const Boxshow = ({ cartprod, setcart, setpage }) => {
+const Boxshow = ({ cartprod, setcart}) => {
+  const navigate = useNavigate();
   const [location, setlocation] = useState([30.0444, 31.2357]);
   const [showmap, setmapshow] = useState(false);
 
   const num = cartprod.reduce((acc, sum) => acc + sum.prize * sum.qty, 0);
 
   const sendmessage = () => {
-    const phonenumber = '201287025435';
+    const phonenumber = '201203579604';
     const prodlists = cartprod.map((items) => {
       return `${items.name} (الكميه:${items.qty})-السعر:${items.prize * items.qty}`;
     }).join('%0A');
@@ -95,7 +96,7 @@ const Boxshow = ({ cartprod, setcart, setpage }) => {
 
         {/* زرار الرجوع */}
         <div className="col-12 col-md-4">
-          <button className="btn btn-outline-secondary w-100 fw-bold py-2 shadow-sm" onClick={() => setpage('products')}>
+          <button className="btn btn-outline-secondary w-100 fw-bold py-2 shadow-sm" onClick={() => navigate('/products')}>
             ⬅ GO BACK
           </button>
         </div>
