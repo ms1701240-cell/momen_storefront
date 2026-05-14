@@ -36,12 +36,7 @@ const sharedDetails = {
 
 export const products={
   jeans:[ 
-    {size:'',name:'Men’s light blue denim cargo jeans',title:'Features large side cargo pockets for a trendy and practical touch. Made from durable denim, perfect for everyday wear and casual outings',img:'img/Desktop/New folder (2)/5564 (2).jpg',desc2:' Features large side cargo pockets for a trendy and practical touch. Made from durable denim, perfect for everyday wear and casual outings',descarb:'بنطلون جينز رجالي بتصميم كارجو عصري باللون الأزرق الفاتح. يتميز بجيوب جانبية كبيرة عملية تضيف لمسة شبابية عصرية وتمنحك راحة أثناء الاستخدام',prize:740,feature:'Relaxed fit for freedom of movement',color:'Light blue wash',quality:'High-quality denim fabric',Material:"durable denim"},
-    {size:'28 30 32 34 36 38',name:"Men's Jeans are a stylish and versatile addition to any man's wardrobe",title:'EGYWEAR is dedicated to creating high-quality denim that is both comfortable and elegant With contemporary designs these jeans are perfect for any occasion, allowing you to dress up or down effortless1',img:'img/Desktop/New folder (3)/fb.jpg',Material:'cotton',desc2:"Men's Jeans are a stylish and versatile addition to any man's wardrobe, blending luxury with practicality. Founded in Egypt in 2022, EGYWEAR is dedicated to creating high-quality denim that is both comfortable and elegant",prize:1100.00,quality:'comfort and durability'},
-    {size:'28 30 32 34 36 38',name:"Men's Jeans are a luxury jeans brand",title:'The brand manufactures jeans with modern and contemporary models. EGYWEAR jeans are made of high-quality materials to provide comfort and elegance. EGYWEAR jeans models are not only elegant, but also extremely practical and versatile',img:'img/Desktop/New folder (4)/1.jpg',prize:950.00,Material:'cotton',desc2:"Stylish Appearance: Modern designs suitable for various occasions Comfort: Made from high-quality cotton for all-day wear",quality:"comfort and elegance"},
-    {size:'30   32  36  38  34',name:"Coup Men's Jeans",title:'designed for comfort and style, perfect for casual wear. These jeans feature a regular fit and a plain pattern, ensuring versatility for various occasions', prize:700.00,img:'img/Desktop/New folder (5)/ظ.jpg',desc2:"Fit: Regular fit for all-day comfort. Style: Casual, suitable for everyday wearLength: Standard length for a classic look",color:'Light Blue/White & Blue',Material:'Durable jeans fabric',quality:'comfort and style'},
-    {size:'30  32  34  36  38',name:"SUOL Made to match your SOUL",title:" The Men's fashion brand that reflects the elegant man's style with exceptional qualityWe bring you the latest youth fashion trends at competitive prices combining modern design, comfort , and distinction in every piece",img:'img/Desktop/New folder (6)/gjjf.jpg',desc2:"The Men's fashion brand that reflects the elegant man's style with exceptional quality. We bring you the latest youth fashion trends at competitive prices, combining modern design,comfort, and distinction in every piece",Material:'cotton/lycra',quality:'premium',style:'wide leg',prize:1100.00},
-    {size:'36 34 32',name:"Men's wide leg jeans",title:"Men's wide leg jeans, excellent quality, made of pure cotton, one of the finest types of jeans",img:'img/Desktop/New folder (7)/234.jpg',prize:750.00,desc2:"excellent quality, made of pure cotton, one of the finest types of jeans",Material:'pure cotton',quality:'excellent quality',}
+   
 ],
 hoodies:[
 {name:'Eagle Vision Hoodie',title:"The distinctive back design reflects freedom, focus, and energy in every detail A look that combines strength and elegance with a modern streetwear vibe",
@@ -423,9 +418,104 @@ cars: [
     }
   ],
   darks:[
-    {
+     {
+    id: 1,
+    name: "Tayer Dark Collection Tee",
+    title: "Signature Oversized Fit",
+    desc2:
+      "Embrace the Shadow. Define Your Freedom with a premium oversized tee inspired by modern streetwear and dark aesthetics.",
+    quality: "240 GSM Heavyweight, Reinforced Stitching",
+    Material: "100% Premium Cotton",
+    size: "sm/md/xl",
+    priceFront: "250 EGP",
+    priceFull: "300 EGP",
+    img: "img/dark/313.jpg",
+  },
 
-    }
+  {
+    id: 2,
+    name: "Tayer Midnight Pulse",
+    title: "Urban Relaxed Fit",
+    desc2:
+      "Minimal design with deep black tones and premium comfort made for everyday streetwear styling.",
+    quality: "260 GSM Heavyweight Fabric",
+    Material: "Soft-Treated Cotton",
+    size: "sm/md/xl",
+    priceFront: "300 EGP",
+    priceFull: "350 EGP",
+    img: "img/dark/BLACK DRAP.jpg",
+  },
+
+  {
+    id: 3,
+    name: "Tayer Eclipse Tee",
+    title: "Minimal Street Edition",
+    desc2:
+      "Luxury oversized silhouette crafted for confidence, comfort, and modern urban fashion.",
+    quality: "280 GSM Premium Quality",
+    Material: "100% Organic Cotton",
+    size: "sm/md/xl",
+    priceFront: "250 EGP",
+    priceFull: "300 EGP",
+    img: "img/dark/BST.jpg",
+  },
+
+  {
+    id: 4,
+    name: "Tayer Silent Wings",
+    title: "Classic Dark Fit",
+    desc2:
+      "Timeless darkwear piece with subtle branding and a sleek modern appearance.",
+    quality: "Fade Resistant Print",
+    Material: "Premium Cotton Blend",
+    size: "sm/md/xl",
+    priceFront: "300 EGP",
+    priceFull: "350 EGP",
+    img: "img/dark/Streetwear.jpg",
+  },
+
+  {
+    id: 5,
+    name: "Tayer Night Vision",
+    title: "Modern Oversized Tee",
+    desc2:
+      "Built for comfort and bold street presence with heavyweight breathable cotton.",
+    quality: "Pre-Shrunk Fabric",
+    Material: "240 GSM Cotton",
+    size: "sm/md/xl",
+    priceFront: "250 EGP",
+    priceFull: "300 EGP",
+    img: "img/dark/VA.jpg",
+  },
+
+  {
+    id: 6,
+    name: "Tayer Shadow Core",
+    title: "Premium Streetwear Fit",
+    desc2:
+      "The perfect balance between simplicity and luxury with a smooth premium finish.",
+    quality: "Double-Stitched Durability",
+    Material: "100% High-Grade Cotton",
+    size: "sm/md/xl",
+    priceFront: "300 EGP",
+    priceFull: "350 EGP",
+    img: "img/dark/Version 2 teer.jpg",
+  },
+
+  {
+    id: 7,
+    name: "Tayer Phantom Black",
+    title: "Essential Oversized Tee",
+    desc2:
+      "A bold minimalist tee designed to stand out through quality, fit, and dark aesthetics.",
+    quality: "280 GSM Luxury Heavyweight",
+    Material: "Silk-Soft Cotton",
+    size: "sm/md/xl",
+
+    priceFront: "250 EGP",
+    priceFull: "300 EGP",
+    img: "img/dark/ZERO.jpg",
+  },
   ],
   shirt:[
     {

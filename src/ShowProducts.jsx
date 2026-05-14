@@ -42,6 +42,12 @@ const filterized = (Array.isArray(products) ? products : [])
     <div className="col">
       <small className="card-text">Cost:<span className="badge bg-secondary">{item.prize}</span></small>
     </div>
+     <div className="col">
+      <small className="card-text">priceFront:<span className="badge bg-secondary">{item.priceFront}</span></small>
+    </div>
+     <div className="col">
+      <small className="card-text">priceFull:<span className="badge bg-secondary">{item.priceFull}</span></small>
+    </div>
     <div className="col">
       <small className="card-text">Size:<span className="badge bg-secondary">{item.size}</span></small>
     </div>

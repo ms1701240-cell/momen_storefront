@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Contact = () => {
   const myRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
-  const phone='201287025435'
+  const phone='201203579604'
   const text='اهلا بكم'
 const whats=`https://wa.me/${phone}?text=${text}`;
   useEffect(() => {
