@@ -7,5 +7,5 @@ export default defineConfig({
     react(),      // يجب أن تكون هكذا مباشرة
     tailwindcss() // وليس داخل أقواس مربعة إضافية
   ],
-  base: "/momen_storefront/",
+  
 })
