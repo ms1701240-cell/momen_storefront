@@ -4,11 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    [react()],
-     tailwindcss()
+    react(),      // يجب أن تكون هكذا مباشرة
+    tailwindcss() // وليس داخل أقواس مربعة إضافية
   ],
-  base:"/momen_storefront/"
+  base: "/momen_storefront/",
 })
-// https://vite.dev/config/
-
-
