@@ -7,6 +7,7 @@ export default defineConfig({
     [react()],
      tailwindcss()
   ],
+  base:"/momen_storefront/"
 })
 // https://vite.dev/config/
 
