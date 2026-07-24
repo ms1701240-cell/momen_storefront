@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    react(),      // يجب أن تكون هكذا مباشرة
-    tailwindcss() // وليس داخل أقواس مربعة إضافية
+    react(),      
+    tailwindcss() 
   ],
 
 })
