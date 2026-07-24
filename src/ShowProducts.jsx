@@ -1,7 +1,5 @@
 import Modalspro from "./Modalspro"
 
-
-
 const ShowProducts = ({Category,products,modal,setmodal,setcart,cartprod,search}) => {
   const add=(item)=>{
     const eisst=cartprod.find(p=>p.name==item.name) 

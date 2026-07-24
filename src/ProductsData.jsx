@@ -44,7 +44,7 @@ desc2:'A high-quality blended Milton cotton hoodie, inspired by the power and sh
 size:' Available in all sizes (S to XXL)',
 img:'img/hodees/eagle1.jpg',img2:'img/hodees/eagle2.jpg',Material:" Blended Milton cotton",
 color:' White with artistic black print',
-quality:' blended Milton cotton hoodie',prize:''},
+quality:' blended Milton cotton hoodie',prize:'300EGP'},
 {name:'Bahr Hoodie The Warmth of a Story the Elegance of a Memory',
   title:' Crafted from premium blended Milton cotton, it offers perfect warmth and a soft touch for ultimate comfort in every momentWith its simple yet elegant design, it perfectly complements any winter look', 
   desc2:'The Bahr Hoodie is more than just a piece of clothing — it’s a story to be toldInspired by the tale of “Bahr”, which speaks of someone who returned to the sea whenever they missed the one they loved — where the waves carried their beautiful memories',
@@ -61,7 +61,7 @@ quality:' blended Milton cotton hoodie',prize:''},
   quality:' Warmth and comfort of the highest quality',
 
   Material:' Premium blended Milton cotton',
-  prize:''
+  prize:'300EGP'
 },
 {name:'',
   title:'',
@@ -708,7 +708,7 @@ y2k:[
     title: "Mona Nasser Custom Graphic Tee",
     
     Material: "High-quality cotton blend",
-    
+    prize:'300EGP',
     quality: "Premium breathable fabric with durable",
     img: "/img/limted collction/Pin de Mona.jpg"
   },
@@ -716,7 +716,7 @@ y2k:[
     ...sharedDetails,
     name: "new design",
     title: "Exclusive New Design Graphic Tee",
-   
+   prize:'300EGP',
     Material: "High-quality cotton blend",
    quality: "Premium breathable fabric with durable",
     
@@ -726,7 +726,7 @@ y2k:[
     ...sharedDetails,
     name: "Camiseta Efecto Lavado",
     title: "Teen Graphic Design Trends Tee",
-    
+    prize:'300EGP',
   Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable",
   
@@ -736,7 +736,7 @@ y2k:[
     ...sharedDetails,
     name: "BSR",
     title: "BSR Exclusive Streetwear Tee",
-   
+   prize:'300EGP',
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable",
     
@@ -746,7 +746,7 @@ y2k:[
     ...sharedDetails,
     name: "Y2K Vintage Tees",
     title: "Y2K Vintage Tees for Men & Women - Grunge Aesthetic",
-   
+   prize:'300EGP',
     Material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
     
@@ -756,7 +756,7 @@ y2k:[
     ...sharedDetails,
     name: "Plus Size Graphic",
     title: "Slogan Print Round Neck Summer Tee",
-    
+    prize:'300EGP',
     Material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
     
@@ -766,7 +766,7 @@ y2k:[
     ...sharedDetails,
    name: "DAST",
     title: "DAST Cyber-inspired Graphic Tee",
-   
+   prize:'300EGP',
     Material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
     
@@ -777,7 +777,7 @@ y2k:[
    
     name: "LR",
     title: "LR Pink Butterfly Streetwear Tee",
-    
+    prize:'300EGP',
     Material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
     
@@ -788,7 +788,7 @@ y2k:[
     ...sharedDetails,
     name: "REF",
     title: "REF Aesthetic Portrait T-shirt",
-    
+    prize:'300EGP',
     Material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
     
@@ -844,7 +844,7 @@ Y2KCollection:[
     desc: "Bold Berserk anime inspired graphic tee from our limited Y2K collection.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    
+    prize:'300EGP',
     img: "/img/y2k/y2k/Berserk T-shirt.jpg"
   },
   {
@@ -854,7 +854,7 @@ Y2KCollection:[
     desc: "Clean and expressive BREATHE graphic design for a modern Y2K look.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    
+    prize:'300EGP',
     img: "/img/y2k/y2k/BREATHE.jpg"
   },
   
@@ -865,7 +865,7 @@ Y2KCollection:[
     desc: "Distinctive retro tech inspired visuals from the GEN Z series.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    
+    prize:'300EGP',
     img: "/img/y2k/y2k/GEN Z 2.jpg"
   },
   {
@@ -875,7 +875,8 @@ Y2KCollection:[
     desc: "Cyber-inspired visuals with bold typography for a standout look.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    img: "/img/y2k/y2k/GEN Z 3.jpg"
+    img: "/img/y2k/y2k/GEN Z 3.jpg",
+    prize:'300EGP',
   },
   {
     ...y2kProduct,
@@ -884,7 +885,7 @@ Y2KCollection:[
     desc: "The original GEN Z graphic design, a staple piece for any Y2K wardrobe.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    
+    prize:'300EGP',
     img: "/img/y2k/y2k/GEN Z.jpg"
   },
   {
@@ -894,7 +895,8 @@ Y2KCollection:[
     desc: "Intense GUTS graphic print inspired by retro anime aesthetics.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    img: "/img/y2k/y2k/GUTS.jpg"
+    img: "/img/y2k/y2k/GUTS.jpg",
+    prize:'300EGP',
   },
   
   {
@@ -904,7 +906,7 @@ Y2KCollection:[
     desc: "Nostalgic portrait graphic with a cyber-inspired Y2K finish.",
     material: "Premium Breathable Cotton Blend",
     quality: "Premium breathable cotton blend with durable",
-    
+    prize:'300EGP',
     img: "/img/y2k/y2k/REF.jpg"
   }
 ],
@@ -922,7 +924,7 @@ Limitedcollection:[
     desc: "Upgrade your everyday style with this BAK WEAR FASHION statement piece from our limited collection.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/BAK WEAR FASHION.jpg"
   },
   {
@@ -932,7 +934,7 @@ Limitedcollection:[
     desc: "A perfect balance between fashion and functionality with a clean white aesthetic.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/BAK-WEAR FASHION.jpg"
   },
   {
@@ -942,7 +944,7 @@ Limitedcollection:[
     desc: "Distinctive graphic design inspired by contemporary fashion trends.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/BCC.jpg"
   },
   {
@@ -952,7 +954,7 @@ Limitedcollection:[
     desc: "Soft touch against the skin with a bold BSR graphic print.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/BSR.jpg"
   },
   {
@@ -962,7 +964,7 @@ Limitedcollection:[
     desc: "Inspired by modern street culture, this washed effect tee is a versatile addition to any wardrobe.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/Camiseta Efecto Lavado Grafitti _ Teen Graphic Design Trends.jpg"
   },
   {
@@ -972,7 +974,7 @@ Limitedcollection:[
     desc: "Relaxed yet structured fit suitable for various body types.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/drop shoulder tshirt (1).jpg"
   },
   {
@@ -982,14 +984,14 @@ Limitedcollection:[
     desc: "Designed to provide comfort and confidence wherever you go.",
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
-    
+    prize:'300EGP',
     img: "/img/limted collction/drop shoulder tshirt.jpg"
   },
   {
     ...sharedDetails,
     name: "get ready",
     title: "Get Ready Modern Aesthetic Tee",
-    
+    prize:'300EGP',
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
     
@@ -999,7 +1001,7 @@ Limitedcollection:[
     ...sharedDetails,
     name: "new design",
     title: "Exclusive New Design Graphic Tee",
-    
+    prize:'300EGP',
     Material: "High-quality cotton blend",
     
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
@@ -1009,7 +1011,7 @@ Limitedcollection:[
     ...sharedDetails,
     name: "New York Bagel T-Shirt",
     title: "New York Bagel Urban Streetwear",
-    
+    prize:'300EGP',
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
     
@@ -1019,7 +1021,7 @@ Limitedcollection:[
     ...sharedDetails,
     name: "Raised Print Mockup",
     title: "Raised Print Showcase Tee",
-    
+    prize:'300EGP',
     Material: "High-quality cotton blend",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
     
@@ -1032,6 +1034,7 @@ Limitedcollection:[
     Material: "High-quality cotton blend",
     img: "/img/limted collction/T-Shirts.jpg",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
+    prize:'300EGP',
   },
   {
     ...sharedDetails,
@@ -1040,6 +1043,7 @@ Limitedcollection:[
     Material: "High-quality cotton blend",
     img: "/img/limted collction/URB.jpg",
     quality: "Premium breathable fabric with durable, high-quality graphic prints.",
+    prize:'300EGP',
   }
 ],
 }
