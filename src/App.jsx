@@ -1,4 +1,5 @@
-
+import  Dashboard  from "./components/Dashboard";
+import { supabase } from './supabase/supabse'; 
 import {  useEffect, useState } from "react";
 import { Toaster } from 'react-hot-toast';
 import "./App.css";
@@ -22,10 +23,24 @@ import { BrowserRouter as Router ,Routes,Route } from "react-router-dom";
 const App = () => {
   console.log('Render Happend')
 const[Category,Setcategory]=useState('')
+const [dbProducts, setDbProducts] = useState([]);
 const[userprofile,setuserprofile]=useState(()=>{
   const savedname=localStorage.getItem('username');
   return savedname?{Username:savedname}:null;
 })
+async function fetchProductsFromSupabase() {
+  const { data, error } = await supabase.from("products").select("*");
+  if (error) {
+    console.log("Error fetching:", error);
+  } else {
+    setDbProducts(data);
+  }
+}
+
+useEffect(() => {
+  fetchProductsFromSupabase();
+}, []);
+
 const[modal,setmodal]=useState(null);
 const[cartprod,setcart]=useState(()=>{
   const saved=localStorage.getItem('box');
@@ -85,6 +100,7 @@ return (
    <Router>
     <NavRev userprofile={userprofile} setuserprofile={setuserprofile} setcat={Setcategory} cartprod={cartprod}   getsearch={getsearch}  />
     <Routes>
+       <Route path="/momen-secret-dash-998877" element={<Dashboard />} />
       <Route path="/" element={<><Background  setcat={Setcategory}/>  <Section/>
           <Feedbacks />
           </> }/>
@@ -92,9 +108,22 @@ return (
           <Feedbacks />
           <Footer/></> }/>
       <Route path="/contact" element={<><Contact/></>}/>
-      <Route path="/cat" element={<> <ShowProducts Category={Category} products={Category === '' || Category === 'all' ? 
-      Object.values(products).flat() : products[Category]
-    } modal={modal} setmodal={setmodal} setcart={setcart} cartprod={cartprod} search={search} getsearch={getsearch} /></>}/>
+      <Route path="/cat" element={<> 
+  <ShowProducts 
+    Category={Category} 
+    products={
+      Category === '' || Category === 'all' 
+        ? [...dbProducts, ...Object.values(products).flat()] 
+        : dbProducts.length > 0 ? dbProducts : (products[Category] || [])
+    } 
+    modal={modal} 
+    setmodal={setmodal} 
+    setcart={setcart} 
+    cartprod={cartprod} 
+    search={search} 
+    getsearch={getsearch} 
+  />
+</>}/>
     <Route path="/box" element={<><Boxshow cartprod={cartprod} setcart={setcart}/></>}/>
      <Route path="/signup" element={<> <Sign  setcart={setcart} getuserprofile={getuserprofile} setuserprofile={setuserprofile}/></>}/>
       <Route path="/about" element={<><About/></>}/>
