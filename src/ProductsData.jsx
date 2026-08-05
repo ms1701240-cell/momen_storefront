@@ -32,6 +32,13 @@ const sharedDetails = {
   fit: "Regular / Relaxed Fit",
   care: "Machine wash cold, do not bleach, wash inside out."
 };
+const graphicTeeDetails = {
+  prize:'300EGP',
+  Material:"Soft and comfortable cotton fabric.",
+  quality:"Premium DTF print with vibrant, long-lasting colors.",
+   size: "S/M/L/XL/XXL",
+
+}
 
 
 export const products={
@@ -828,7 +835,26 @@ winter:[
 ],
 GraphicTees:[
   {
+    ...graphicTeeDetails,
+     name: "Madara Uchiha Streetwear Oversized.",
+    title: "Channel the power and presence of Madara Uchiha with this oversized T-shirt",
+    dec: "It features a clean, minimalist Sharingan logo on the front, while the back showcases a full-detail graphic inspired by the world of Naruto, giving you a bold and eye-catching look from every angle.",
+    img:'/img/graphic-tees/Madara-Uchiha-Streetwear-Oversized.png'
 
+  },
+  {
+...graphicTeeDetails,
+   name:"Berserk Oversized T-Shirt – White Edition",
+   title:"Berserk Brand of Sacrifice Oversized T-Shirt – Premium Cotton Graphic Tee",
+   desc:"Channel the strength and determination of Berserk with this oversized T-shirt, designed for anime and streetwear fans. Featuring a bold front graphic inspired by the legendary warrior alongside the iconic red Brand of Sacrifice, this piece delivers a powerful and unforgettable look. Crafted from soft premium cotton with a relaxed oversized fit, it offers all-day comfort. The high-quality DTF print is durable, fade-resistant, and maintains its sharp details even after repeated washing.",
+   img:"/img/graphic-tees/Berserk-Oversized-T-Shirt-White-Edition.png"
+  },
+  {
+...graphicTeeDetails,
+   name: "Dexter Morgan Oversized T-Shirt – Black Edition",
+   title: "Dexter Morgan Oversized T-Shirt – Black Edition",
+   desc: "Show off your dark side with the Dexter Morgan Oversized T-Shirt, created for fans of the iconic TV series and modern streetwear. Featuring a clean front print and a bold, detailed back graphic inspired by Dexter Morgan, this tee delivers the perfect balance of minimalism and statement style. Crafted from premium soft cotton with a relaxed oversized fit, it offers all-day comfort. The high-quality DTF print is durable, fade-resistant, and designed to maintain its sharp details even after repeated washing.",
+   img: "/img/graphic-tees/Dexter-Morgan-Oversized-T-Shirt-Black-Edition.png"
   }
 ],
 RetroCollection:[
