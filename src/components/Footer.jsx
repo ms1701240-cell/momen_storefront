@@ -29,9 +29,9 @@ const Footer = () => {
           Copyright © 2026 All rights reserved by: 
           <strong className="text-warning text-uppercase"> TAYR</strong>
         </p>
-        <p className="text-primary text-center">
+        <a href="https://www.instagram.com/mohamed_sayed_abdelkawy_/"  className="  d-flex w-full w-4 justify-content-center">
            BY DESIGN : ENG/MOHAMED SAYED
-        </p>
+        </a>
       </div>
     </div>
   )
